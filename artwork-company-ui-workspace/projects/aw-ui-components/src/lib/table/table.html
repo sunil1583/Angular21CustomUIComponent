@@ -1,0 +1,21 @@
+<table class="company-table">
+  <thead>
+    <tr>
+      @for (col of columns; track $index) {
+        <th>
+          <li>{{ col }}</li>
+        </th>
+      }
+    </tr>
+  </thead>
+
+  <tbody>
+    @for (row of data; track $index) {
+      <tr>
+        @for (col of columns; track $index) {
+          <td>{{ row[col] }}</td>
+        }
+      </tr>
+    }
+  </tbody>
+</table>
